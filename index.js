@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/latest-version', (req, res) => {
-  const latestVersion = process.env.LATEST_VERSION || "1.0.2";
+  const latestVersion = process.env.LATEST_VERSION || "1.0.6";
   const apkUrl = process.env.APK_URL || "https://github.com/Jaiswal-Jatin/JTunes/releases/download/JTunes/JTunes_New.apk";
   const updateNotes = process.env.UPDATE_NOTES || "Initial release.";
   const forceUpdate = process.env.FORCE_UPDATE === 'true';
