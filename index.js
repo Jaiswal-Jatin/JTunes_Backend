@@ -3,9 +3,17 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/latest-version', (req, res) => {
-  const latestVersion = process.env.LATEST_VERSION || "1.0.5";
+  const latestVersion = process.env.LATEST_VERSION || "1.0.2";
   const apkUrl = process.env.APK_URL || "https://github.com/Jaiswal-Jatin/JTunes/releases/download/JTunes/app-release.apk";
-  const updateNotes = process.env.UPDATE_NOTES || "Initial release.";
+  const updateNotes = process.env.UPDATE_NOTES || [
+    "Bug fixes and performance improvements",
+    "Improved app stability",
+    "Faster loading speed",
+    "Enhanced user experience",
+    "Security updates",
+    "Minor UI improvements",
+    "New features added"
+  ];
   const forceUpdate = process.env.FORCE_UPDATE === 'true';
 
   res.json({
