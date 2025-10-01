@@ -3,8 +3,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 app.get('/latest-version', (req, res) => {
-  const latestVersion = process.env.LATEST_VERSION || "1.0.4";
-  const apkUrl = process.env.APK_URL || "https://drive.google.com/file/d/1qSfbdXivJBtfyxqtsSQlVObjk3Z2a365/view?usp=drivesdk";
+  const latestVersion = process.env.LATEST_VERSION || "1.0.5";
+  const apkUrl = process.env.APK_URL || "https://github.com/Jaiswal-Jatin/JTunes/releases/download/JTunes/app-release.apk";
   const updateNotes = process.env.UPDATE_NOTES || "Initial release.";
   const forceUpdate = process.env.FORCE_UPDATE === 'true';
 
